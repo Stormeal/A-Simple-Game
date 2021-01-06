@@ -635,7 +635,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -653,13 +653,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.41118264, y: -0.24743758, z: 0.06745901, w: 0.8747301}
-  m_LocalPosition: {x: 4.94, y: 23.07, z: -15.86}
+  m_LocalRotation: {x: 0.5687435, y: -0.55525506, z: 0.4771173, w: 0.37494227}
+  m_LocalPosition: {x: -1.83, y: 17.97, z: -14.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 48.828, y: -34.979, z: -7.459}
+  m_LocalEulerAnglesHint: {x: 73.006, y: 154.389, z: 249.528}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +976,8 @@ GameObject:
   - component: {fileID: 1910402771}
   - component: {fileID: 1910402770}
   - component: {fileID: 1910402769}
+  - component: {fileID: 1910402774}
+  - component: {fileID: 1910402773}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1059,6 +1061,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1910402773
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910402768}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &1910402774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910402768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2a2be9e8c28d843b134fd60ebe51df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBody: {fileID: 0}
 --- !u!1 &1988469850
 GameObject:
   m_ObjectHideFlags: 0
