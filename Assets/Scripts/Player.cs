@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody playerBody;
-    [SerializeField]
-    private Game game;
+    [SerializeField]    private Rigidbody playerBody;
+    [SerializeField]    private Game game;
+    [SerializeField]    private int coins;
+    [SerializeField]    private TMPro.TextMeshProUGUI coinText;
+
     private Vector3 inputVector;
     private bool jump;
 
@@ -52,6 +53,24 @@ public class Player : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             game.ReloadCurrentLevel();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "Coin":
+                coins++;
+                Destroy(other.gameObject);
+                coinText.text = string.Format("Coins\n{0}", coins);
+                break;
+            case "Goal":
+                other.GetComponent<Goal>().CheckForCompletion(coins);
+                break;
+
+            default:
+                break;
         }
     }
 }
