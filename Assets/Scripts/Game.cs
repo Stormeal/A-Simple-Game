@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
         }
         else
         {
-            // go to main menu
+            LoadLevel("Main-Menu");
         }
     }
 
